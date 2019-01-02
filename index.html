@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MARECKI - wyceny</title>
+    <meta name="description" content="Marecki - wyceny">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="logo.png" alt="">
+    <button id="ustawienia_button"></button>
+    <div id="pudelko">
+    <div id="panel">
+    <div id='wycena'>
+    <form>
+        <div class="klient">
+            <label for="rabat">RABAT</label>
+            <input type="number" id="rabat">
+        </div>
+
+        <div class="material">
+            <h2>MATERIAŁ</h2>
+            <h3>PŁYTY</h3>
+            <button id="dodaj_plyte">DODAJ</button>
+            <ol id="lista_plyt">
+               <!-- <li><label for="plyta">Cena płyty:</label>
+                    <input type='number' id="plyta">
+                    <label for="ilosc_plyt">Ilość płyt:</label>
+                    <input type="number" id="ilosc_plyt"></li> -->
+            </ol>
+
+            <h3>OBRZEŻE</h3>
+            <button id="dodaj_obrzeze">DODAJ</button>
+            <ol id="lista_obrzeży">
+               <!-- <li>
+                    <select name="obrzeże" class="obrzeże">
+                    <option value="1">22/05</option>
+                    <option value="1.2">22/08</option>
+                    <option value="3">22/1 Połysk</option>
+                    <option value="2.8">22/2</option>
+                    <option value="5">42/1</option>
+                    <option value="7">42/1 Połysk</option>
+                    <option value="6">42/2</option>
+                </select>
+
+                    <label for="obrzeże_metry">Ilość metrów:</label>
+                    <input type="number" id="obrzeże_metry">
+                </li> -->
+            </ol>
+            <h4>MATERIAŁ RAZEM: </h4><span id="material_razem"></span>
+        </div>
+
+        <div class="uslugi">
+
+            <div class="uslugi_linia">
+                <h2>USŁUGI</h2>
+                <label><input type="radio" name="ceny" value="detal"> <span>DETAL</span></label>
+                <label><input type="radio" name="ceny" value="hurt"><span>HURT</span></label>
+                <div class="alert" id="alert_hurt/detal"></div>
+            </div>
+
+            <h3>OBRZEŻE</h3>
+            <button id="dodaj_oklejanie">DODAJ</button>
+            <ol id="lista_oklejanie">
+            <!--<li>
+            <label for="oklejanie"></label>
+            <select name="oklejanie" class="oklejanie">
+                    <option value="22/05">22/05</option>
+                    <option value="22/08">22/08</option>
+                    <option value="22/08 Połysk">22/08</option>
+                    <option value="22/1_połysk">22/1 Połysk</option>
+                    <option value="22/2">22/2</option>
+                    <option value="42/1">42/1</option>
+                    <option value="42/1_połysk">42/1 Połysk</option>
+                    <option value="42/2">42/2</option>
+                </select>
+            <label for="oklejanie_metry">Metry oklejania</label>
+            <input type="number" id="oklejanie_metry">
+            </li> -->
+            </ol>
+            <label for="ciecie"><h3>Metry cięcia</h3></label>
+            <input type="number" id="ciecie"><span id="metry_ciecia"></span>
+            <div class="clearfix"></div>
+            <h4>USŁUGI RAZEM: </h4><span id="uslugi_razem"></span>
+        </div>
+         <div id="wynik_div">
+            <h5 id="wynik"></h5>
+        </div>
+    <button id="reload"><span>ODŚWIEŻ</span></button>
+    <button id="policz">POLICZ</button>
+    </form>
+    </div>
+
+
+    <!---   USTAWIENIA ---->
+
+    <div id="ustawienia">
+        <h2>CENY</h2>
+        <form action="setup.php" method="post">
+            <table>
+                <tr>
+                   <td></td>
+                    <td><h3>OBRZEŻE</h3></td>
+                    <td><h3>OKLEJANIE</h3></td>
+                </tr>
+                <tr>
+                    <td>22/0.5</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>22/0.8</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>22/0.8 Połysk</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>22/1 Połysk</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>22/2</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>42/0.8</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>42/1 Połysk</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>42/2</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+        </table>
+            <h2>USŁUGI</h2>
+             <input type="submit" value="ZAPISZ" id="zapisz_ustawienia">
+    </form>
+
+    </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
